@@ -11,7 +11,7 @@
   display: block;
   background-color: rgb(254,245,230);
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,13 +61,69 @@ button{
 .weekly-container{
   background-color: rgb(254,245,230);
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.week-title{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.week{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 6px;
+}
+
+.date-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  margin: 20px 26px 20px 30px;
+  padding: 24px 22px 24px 22px;
+  background-color: rgb(255, 248, 245);
+  border: solid 1px #264653;
+  border-radius: 16px;
+  position: relative;
+}
+
+.mark {
+  position: absolute;
+  bottom: -12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100px; 
+  gap: 4px; 
+}
+
+.mark img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.date-container img{
+  width: 20px;
+  height: 20px;
+}
+
+.date{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 22px;
 }
 
 .monthly-container{
   background-color: rgb(254,245,230);
-  padding: 40px 100px 30px 100px;
+  padding: 20px 100px 20px 100px;
   margin-bottom: 20px;
   font-size: 20px;
 }
@@ -79,11 +135,12 @@ button{
   margin-bottom: 20px;
 }
 
-.details-title{
+.month-title{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   margin-bottom: 30px;
+  margin-top: 0px;
 }
 
