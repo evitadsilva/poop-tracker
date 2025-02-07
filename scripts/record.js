@@ -42,6 +42,17 @@ function startTimer(){
 
 }
 
+function addMarkToToday(){
+  const todayContainer = document.querySelector('.date-container.today .js-mark');
+
+  if(todayContainer){
+    const img = document.createElement("img");
+    img.src = "images/capy3.png";
+    todayContainer.appendChild(img);
+  }
+};
+
 recordButton.addEventListener("click", () => {
   startTimer();
+  addMarkToToday();
 });

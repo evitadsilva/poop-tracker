@@ -15,8 +15,7 @@ function generateWeek() {
       <div class="date-container ${isToday ? "today" : ""}">
         <div class="day">${date.format('ddd')}</div>
         <div class="date">${date.format('D')}</div>
-        <div class="mark">
-          <img src="images/capy3.png"/>
+        <div class="mark js-mark">
         </div>
       </div>
     `;
