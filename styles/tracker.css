@@ -48,7 +48,8 @@ button{
 .time-container{
   display: flex;
   align-items: center;
-  font-size: 20px;
+  justify-content: center;
+  font-size: 18px;
 }
 
 .time{
