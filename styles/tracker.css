@@ -75,9 +75,10 @@ button{
 }
 
 .week{
-  display: flex;
-  justify-content: space-evenly;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  justify-items: center;
 }
 
 .date-container{
@@ -86,20 +87,27 @@ button{
   align-items: center;
   justify-content: space-between;
   width: 60px;
-  margin: 20px 26px 20px 30px;
-  padding: 24px 22px 24px 22px;
+  margin: 26px;
+  padding: 24px 22px;
   background-color: rgb(255, 248, 245);
   border: solid 1px #264653;
   border-radius: 16px;
   position: relative;
 }
 
+.date-container.today {
+  font-style: italic;
+  border: 2px solid #264653;
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px 0px #264653;
+}
+
 .mark {
-  position: absolute;
-  bottom: -12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: absolute;
+  bottom: -12px;
   width: 100px; 
   gap: 4px; 
 }
