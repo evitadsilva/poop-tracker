@@ -27,3 +27,8 @@ header img{
   margin-top: 10px;
   margin-right: 8px;
 }
+
+.sidebar-link a{
+  text-decoration: none;
+  color: inherit;
+}

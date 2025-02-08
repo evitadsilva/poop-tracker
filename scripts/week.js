@@ -19,6 +19,8 @@ function generateWeek() {
         </div>
       </div>
     `;
+
+    localStorage.setItem('weekHTML', weekHTML)
   }
 
   document.querySelector('.js-week').innerHTML = weekHTML;
@@ -26,3 +28,5 @@ function generateWeek() {
 }
 
 generateWeek();
+
+

@@ -7,8 +7,8 @@ recordHTML = `
     <img src="images/capy2.png"/>
     <div class="time-container">
       <div>last</div>
-      <div class="time js-time"> 0 </div>
-      <div>mins.</div>
+      <div class="time js-time">0</div>
+      <div>mins</div>
     </div>
   </div>
   <button class="js-record-button">Record</button>
@@ -28,13 +28,20 @@ function startTimer(){
   timerDisplay.textContent = "0";
 
   let startTime = dayjs();
+  localStorage.setItem("startTime", startTime);
 
   timer = setInterval(() => {
     const currentTime = dayjs();
     const elapsedSeconds = currentTime.diff(startTime, 'second');
-    const elapsedMinutes = Math.floor(elapsedSeconds / 60);
 
-    const displayTime = `${elapsedMinutes}`.padStart(2,"0");
+    const totalMinutes = Math.floor(elapsedSeconds / 60);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60
+
+    const displayHours = String(hours).padStart(2,'0');
+    const displayMinutes = String(minutes).padStart(2,'0');
+
+    const displayTime = `${displayHours}:${displayMinutes}`;
 
     timerDisplay.textContent = displayTime;
 
@@ -56,3 +63,8 @@ recordButton.addEventListener("click", () => {
   startTimer();
   addMarkToToday();
 });
+
+const savedStartTime = localStorage.getItem("startTime");
+if(savedStartTime){
+  startTimer();
+}
