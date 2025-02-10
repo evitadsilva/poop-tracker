@@ -5,16 +5,18 @@
   top: 0px;
   background-color: rgb(254,245,230);
   width: 150px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .sidebar-link{
   cursor: pointer;
-  margin: 15px;
-  padding: 20px 60px 20px 60px;
+  margin: 15px 10px;
+  padding: 20px 50px;
   font-size: 20px;
 }
 
