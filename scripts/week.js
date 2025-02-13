@@ -2,8 +2,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 function generateWeek() {
   let today = dayjs();
-  let dayIndex = today.day();
-  let startOfWeek = today.subtract(dayIndex, "day");
+  let startOfWeek = today.subtract(3, "day");
 
   let weekHTML ="";
 
@@ -24,6 +23,7 @@ function generateWeek() {
   }
 
   document.querySelector('.js-week').innerHTML = weekHTML;
+
 
 }
 
