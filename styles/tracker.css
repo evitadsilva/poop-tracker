@@ -75,11 +75,41 @@ button{
   margin-bottom: 10px;
 }
 
-.week{
+.week-wrapper {
   display: flex;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-  justify-items: center;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: rgb(160, 160, 160);
+  padding: 10px;
+}
+
+.nav-button:hover {
+  color: #264653;
+}
+
+.week {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.left-button{
+  left: 180px;
+  bottom: 50px;
+}
+
+.right-button {
+  right: 50px;
+  bottom: 50px;
 }
 
 .date-container{
@@ -88,7 +118,7 @@ button{
   align-items: center;
   justify-content: space-between;
   width: 60px;
-  margin: 26px;
+  margin: 26px 18px;
   padding: 24px 22px;
   background-color: rgb(255, 248, 245);
   border: solid 1px #264653;
@@ -153,4 +183,3 @@ button{
   margin-bottom: 30px;
   margin-top: 0px;
 }
-

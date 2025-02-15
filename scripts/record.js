@@ -28,7 +28,6 @@ function startTimer(){
   timerDisplay.textContent = "0";
 
   let startTime = dayjs();
-  localStorage.setItem("startTime", startTime);
 
   timer = setInterval(() => {
     const currentTime = dayjs();
@@ -63,8 +62,3 @@ recordButton.addEventListener("click", () => {
   startTimer();
   addMarkToToday();
 });
-
-const savedStartTime = localStorage.getItem("startTime");
-if(savedStartTime){
-  startTimer();
-}
