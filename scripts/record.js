@@ -5,8 +5,8 @@ let recordHTML = `
     <img src="images/capy2.png"/>
     <div class="time-container">
       <div>last</div>
-      <div class="time js-time">00:00</div>
-      <div>mins</div>
+      <div class="time js-time">0</div>
+      <div>ago</div>
     </div>
   </div>
   <button class="js-record-button">Record</button>
@@ -41,10 +41,13 @@ function startTimer(savedStartTime = null) {
     const hours = Math.floor(totalMinutes / 60);
     const minutes = totalMinutes % 60;
 
-    const displayHours = String(hours).padStart(2, '0');
-    const displayMinutes = String(minutes).padStart(2, '0');
-
-    timerDisplay.textContent = `${displayHours}:${displayMinutes}`;
+    if (hours === 0) {
+      timerDisplay.textContent = `${totalMinutes} mins`;
+    } else if (minutes === 0) {
+      timerDisplay.textContent = `${hours} hr`;
+    } else {
+      timerDisplay.textContent = `${hours} hr ${minutes} mins`;
+    }
   }, 1000);
 }
 
