@@ -55,19 +55,30 @@ function addMarkToToday() {
   const todayContainer = document.querySelector('.date-container.today .js-mark');
 
   if (todayContainer) {
-    if (!localStorage.getItem("markedToday")) {
+    let markCount = parseInt(localStorage.getItem("markedTodayCount") || "0", 10);
+
+    markCount++;
+    
+    const img = document.createElement("img");
+    img.src = "images/capy3.png";
+    todayContainer.appendChild(img);
+
+    localStorage.setItem("markedTodayCount", markCount);
+    }
+  }
+
+
+function restoreMarks() {
+  const todayContainer = document.querySelector('.date-container.today .js-mark');
+  
+  if (todayContainer) {
+    let markCount = parseInt(localStorage.getItem("markedTodayCount") || "0", 10);
+    
+    for (let i = 0; i < markCount; i++) {
       const img = document.createElement("img");
       img.src = "images/capy3.png";
       todayContainer.appendChild(img);
-
-      localStorage.setItem("markedToday", "true"); // Save mark to localStorage
     }
-  }
-}
-
-function restoreMarks() {
-  if (localStorage.getItem("markedToday")) {
-    addMarkToToday();
   }
 }
 
