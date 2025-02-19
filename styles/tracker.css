@@ -1,22 +1,21 @@
 .tracker-container{
-  padding: 20px;
+  padding-left: 20px;
 }
 
 .tracker-container img{
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 
 .record-container{
   display: block;
   background-color: rgb(254,245,230);
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
   position: relative;
   border: solid 0.1px white;
   padding-bottom: 30px;
@@ -37,8 +36,8 @@ button{
 .hours{
   border: 2px solid ;
   border-radius: 120px;
-  width: 240px;
-  height: 240px;
+  width: 220px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +48,7 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .time{
@@ -97,19 +96,9 @@ button{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 45px;
   flex-grow: 1;
   text-align: center;
-}
-
-.left-button{
-  left: 180px;
-  bottom: 50px;
-}
-
-.right-button {
-  right: 50px;
-  bottom: 50px;
 }
 
 .date-container{
@@ -118,20 +107,18 @@ button{
   align-items: center;
   justify-content: space-between;
   width: 60px;
-  margin: 26px 18px;
-  padding: 24px 22px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  padding: 24px;
   background-color: rgb(255, 248, 245);
   border: solid 1px #264653;
-  border-radius: 16px;
   position: relative;
 }
 
 .date-container.today {
-  transform: scale(1.1);
+  transform: scale(1.2);
   font-style: italic;
   border: 2px solid #264653;
-  border-radius: 16px;
-  box-shadow: 0px 0px 8px 0px;
 }
 
 .mark {
@@ -164,7 +151,7 @@ button{
 .monthly-container{
   background-color: rgb(254,245,230);
   padding: 20px 100px 20px 100px;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   font-size: 20px;
 }
 
