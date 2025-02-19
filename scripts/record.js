@@ -42,11 +42,13 @@ function startTimer(savedStartTime = null) {
     const minutes = totalMinutes % 60;
 
     if (hours === 0) {
-      timerDisplay.textContent = `${totalMinutes} mins`;
+      timerDisplay.textContent = totalMinutes === 1 ? "1min" : `${totalMinutes}mins`;
     } else if (minutes === 0) {
-      timerDisplay.textContent = `${hours} hr`;
+      timerDisplay.textContent = hours === 1 ? "1hr" : `${hours}hrs`;
     } else {
-      timerDisplay.textContent = `${hours} hr ${minutes} mins`;
+      const hourDisplay = hours === 1 ? "1hr" : `${hours}hrs`;
+      const minuteDisplay = minutes === 1 ? "1min" : `${minutes}mins`;
+      timerDisplay.textContent = `${hourDisplay} ${minuteDisplay}`;
     }
   }, 1000);
 }
